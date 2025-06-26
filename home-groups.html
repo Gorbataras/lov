@@ -28,7 +28,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
-
+    <script src="https://js.churchcenter.com/modal/v1"></script>
 </head>
 
 <body id="top">
@@ -88,6 +88,24 @@
 
         <div class="row">
             <div class="column">
+                <div style="display: flex; justify-content: space-between;">
+                    <div class="flex-container"> <!-- container for flex item -->
+                        <h1>
+                            Join a Home Group
+                        </h1>
+                        <p>
+                            If you are interested in learning more, fill out the form so we can connect you to the right group!
+                        </p>
+                    </div>
+                    <div class="flex-container" style="margin: auto;"> <!-- container for flex item -->
+                        <a class="btn btn--footer" href="https://lifeofvictory.churchcenter.com/people/forms/852083" data-open-in-church-center-modal="true">Fill out our form!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="column">
 
                 <p class="lead drop-cap">
 				Day by day continuing with one mind in the temple, and breaking bread from house 
@@ -103,63 +121,6 @@
 				hearts to God.
 				<br> Colossians 3:16 (NASB1995)
                 </p>
-
-                <br>
-
-                <h2>Join a Home Group</h2>
-                
-                <p>
-                Kindly fill-up the form below to help us better understand your profile and help you connect to a connect group that suits you.
-                </p>
-
-                <form name="connectForm" id="connectForm" class="connectForm" method="post" action="https://formspree.io/f/xzblkjea" autocomplete="off">
-                    <fieldset>
-
-                        <div class="form-field">
-                            <input name="cName" id="cName" class="h-full-width h-remove-bottom" placeholder="Your Name" value="" type="text">
-                        </div>
-
-                        <div class="form-field">
-                            <input name="cEmail" id="cEmail" class="h-full-width h-remove-bottom" placeholder="Your Email" value="" type="text">
-                        </div>
-
-                        <div class="form-field">
-                            <input name="cPhone" id="cPhone" class="h-full-width h-remove-bottom" placeholder="Mobile Number" value="" type="tel">
-                        </div>
-
-                        <!--<div class="form-field">
-                            <input name="cFacebook" id="cFacebook" class="h-full-width h-remove-bottom" placeholder="Facebook URL" value="" type="text">
-                        </div>-->
-
-                        <div class="form-field">
-                            <input name="cAge" id="cAge" class="h-full-width h-remove-bottom" placeholder="Your Age" value="" type="text">
-                        </div>
-
-                        <div class="form-field">
-                            <input name="cAvailability" id="cAvailability" class="h-full-width h-remove-bottom" placeholder="Preferred Language" value="" type="text">
-                        </div>
-
-                        <!-- <br>
-                        <div class="form-field">
-                            <label for="cGender">Gender :</label>
-                            <div class="ss-custom-select">
-                                <select class="h-full-width h-remove-bottom" name="cGender" id="cGender">
-                                    <option value="Option 2">Male</option>
-                                    <option value="Option 3">Female</option>
-                                </select>
-                            </div>
-                        </div> -->
-
-                        <div class="comments form-field">
-                            <textarea name="cComments" id="cComments" class="h-full-width h-remove-bottom" placeholder="Comments & Questions"></textarea>
-                        </div>
-
-                        <br>
-
-                        <input name="submit" id="submit" class="btn btn--primary btn--large h-full-width" value="Get Connected" type="submit">
-
-                    </fieldset>
-                </form> <!-- end connectForm -->
 
             </div>
         </div>
