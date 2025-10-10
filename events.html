@@ -22,6 +22,7 @@
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
+    <script src="js/eventsdb.js"></script>
 
     <!-- favicons
     ================================================== -->
@@ -88,98 +89,14 @@
     <section class="page-content">
 
         <div class="row wide block-large-1-2 block-900-full events-list">
-
-            <!--Inserts events under this line: -->
-
-            <div class="column events-list__item" style="background-color: #EEEEEE; border-radius: 30px; padding:30px;">
-                <div class="media-wrap event-thumb">
-                        <img src="images/thumbs/events/event-1000.jpg" 
-                          srcset="images/thumbs/events/event-2000.jpg 2000w, 
-                                  images/thumbs/events/event-500.jpg 500w" sizes="(max-width: 2000px) 100vw, 2000px" alt="">
-                </div>
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#" title="">New Events Coming Soon!</a>
-                </h3>
-                <video width="100%" controls>
-                    <source src="https://f004.backblazeb2.com/file/lov-static-hosting/media/videos/YardSale2025_1080p_draft.mov" type="video/mov">
-                    Your browser does not support the video tag.
-                </video> 
-                <p>
-                    Follow us on Instagram and Facebook to keep up with the latest!
-                </p>
-                <div class="s-social" style="border-radius: 15px; background-color: #3b0d11;">
-                <ul class="social-list">
-                    <li class="social-list__item">
-                        <a href="https://www.facebook.com/lifeofvictory/" target="_blank" title="">
-                            <span class="social-list__icon social-list__icon--facebook"></span>
-                        </a>
-                    </li>
-                    <li class="social-list__item">
-                        <a href="https://www.instagram.com/lifeofvictorychurch/" target="_blank" title="">
-                            <span class="social-list__icon social-list__icon--instagram"></span>
-                        </a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-
-            <!-- <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#" title="">School Supply Donation Drive</a>
-                </h3>
-                <p>
-                    Donate new School Supplies to our neighbors who may be in need based the Renton School District recommended supplies list: <a href="https://www.rentonschools.us/learning-and-teaching/elementary-education/school-supplies"><u>HERE</u></a>
-                    Please donate by August 17th, as the distribution will happen soon after.
-                    Drop off your donations in the church lobby during our service times.
-                </p>
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">Until August 17th 2025</li>
-                    <li class="events-list__meta-time">10:00am to 1:30pm Sundays, 7:00pm to 9:00pm Wednesdays</li>
-                    <li class="events-list__meta-location">17418 108th Ave SE Renton, WA 98055</li>
-                </ul>
-            </div>
-
-            <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#" title="">School Supply Community Hand-Out</a>
-                </h3>
-                <p>
-                    Come to our church on 23rd Aug. to pick up free school supplies to help your student start the school year strong!
-                </p>
-                <p>
-                    <em>This event is on a first-come-first-served basis while supplies last!
-                        Children <strong>must</strong> be present to recieve supplies.
-                    </em>
-                </p>
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">August 23rd 2025</li>
-                    <li class="events-list__meta-time">12:00pm to 3:00pm</li>
-                    <li class="events-list__meta-location">17418 108th Ave SE Renton, WA 98055</li>
-                </ul>
-            </div> -->
-
-            <!-- <div class="column events-list__item">
-                <h3 class="display-1 events-list__item-title">
-                    <a href="#" title="">Candlelight service </a>
-                </h3>
-                <p>
-                    We invite you, and encourage you to come to our Candlelight Service. Service will be centered around
-                    the
-                    greatness and the importance of Jesus' birth and His mission. The service will include
-                    worship, sermon, caroling, and candlelighting. Come early for free coffee cart coffee.
-                </p>
-                <ul class="events-list__meta">
-                    <li class="events-list__meta-date">Thursday, December 18, 2024</li>
-                    <li class="events-list__meta-time">7:00PM - 9:00PM</li>
-                    <li class="events-list__meta-location">17418 108th Ave SE Renton, WA 98055</li>
-                </ul>
-            </div> -->
+            <script src="js/event-render.js"></script>
+            <script>
+                generateEventElements(eventsdb);
+            </script>
 
 
 
-            <!-- end events-list --><!-- end events-list --><!-- end events-list --><!-- end events-list -->
         </div> <!-- end events-list -->
-        <!-- end events-list -->
         <!--
         <div class="row">
             <div class="column large-full">

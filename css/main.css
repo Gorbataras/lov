@@ -468,9 +468,8 @@ dd {
  * ------------------------------------------------------------------- */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
+  /* padding-bottom: 100%; */
+  /* height: 0; */
 }
 
 .video-container iframe,
@@ -481,7 +480,8 @@ dd {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50%;
+  border-radius: 15px 15px 0 0;
 }
 
 /* ------------------------------------------------------------------- 
@@ -1621,12 +1621,27 @@ input::-moz-focus-inner {
 }
 
 .events-list__item {
+  background-color: #EEEEEE;
+  border-radius: 30px;
   margin-bottom: 4rem;
+}
+
+.block-large-1-2 > .column {
+  flex: 0 0 50%;
+  max-width: 48%;
+}
+
+@media screen and (max-width:900px) {
+  .block-large-1-2 > .column {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .events-list__item-title a {
   color: #000000;
   border-bottom: 1px solid transparent;
+  text-justify: center;
 }
 
 .events-list__item-title a:hover,
@@ -3416,6 +3431,7 @@ html.no-csstransitions .hero-content {
 
 .page-content .row {
   max-width: 1080px;
+  justify-content: space-between;
 }
 
 /* ------------------------------------------------------------------- 
@@ -3488,11 +3504,18 @@ html.no-csstransitions .hero-content {
 
 .event-thumb {
   padding: 2.4rem;
-  background-color: #efefef;
 }
 
 .event-thumb img {
   vertical-align: bottom;
+}
+
+.event-thumb video,
+.event-thumb img {
+  vertical-align: bottom;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 15px 15px 0 0;
 }
 
 .event-title {
@@ -3583,19 +3606,21 @@ html.no-csstransitions .hero-content {
 }
 /*LoV additions: */
 /* Live Video container: */
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-}
 
-.video-container iframe {
+/* This video CSS section is redundant */
+/* .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+ } */
+
+/* .video-container iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 /*map container */
 .map-container {
   position: relative;
