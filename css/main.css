@@ -1716,7 +1716,8 @@ input::-moz-focus-inner {
 }
 
 #event-0 {
-  margin: auto;
+  margin: 5% auto;
+  padding: 0 0 10px 0;
   max-width: 80%;
   height: auto;
 }
