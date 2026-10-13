@@ -13,19 +13,33 @@ function checkIfEventHasOccurred (occurrence) {
     // get current time and date
 }
 
+let modalEl = document.getElementsByClassName("event-modal")[0]
+
+var span = document.getElementsByClassName("close")[0];
+
 function openModal(id) {
     // initialize var, on error it will be blank
-    let eventModal
+    // let eventModal
     console.log("check event id: "+id)
-    console.log(JSON.stringify(eventsdb.filter( events => events.URL() === id)))
-    try {
-        eventModal = genEventModal(eventsdb.filter( events => events.URL() === id))
-    } catch (error) {
-        console.log("unable to fetch event Item")        
-        console.log("event: "+JSON.stringify(eventModal))
+    // console.log(JSON.stringify(eventsdb.filter( events => events.URL() === id)))
+    // try {
+    //     eventModal = genEventModal(eventsdb.filter( events => events.URL() === id))
+    // } catch (error) {
+    //     console.log("unable to fetch event Item")        
+    //     console.log("event: "+JSON.stringify(eventModal))
+    // }
+    // document.getElementsByClassName("event-modal")[0].innerHTML = eventModal
+    modalEl.style.display = "block";
+}
+
+span.onclick = function() {
+    modalEl.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modalEl) {
+        modalEl.style.display = "none";
     }
-    document.getElementsByClassName("event-modal")[0].innerHTML = eventModal
-    document.getElementsByClassName("event-modal")[0].style.display = "block"
 }
 
 // function genEventItem (title, URL, shortDescription, occurrence, location, media) {
@@ -66,7 +80,7 @@ function genEventItem (event) {
                 </div>
                 <div class="column events-list__item">
                     <h3 class="display-1 events-list__item-title">
-                        <a onclick="openModal(\'${event.URL()}\')" title="">${event.title}</a>
+                        <a onclick="openModal('yard-sale')" title="">${event.title}</a>
                     </h3>
                     <p>
                     ${event.shortDescription}

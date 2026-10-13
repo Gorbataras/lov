@@ -1699,6 +1699,28 @@ input::-moz-focus-inner {
   width: 2.6rem;
 }
 
+/* -------------------------------------------------------------------
+ * ## events page modal pop-up
+ * ------------------------------------------------------------------- */
+
+.event-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.7);
+}
+
+#event-0 {
+  margin: auto;
+  max-width: 80%;
+  height: auto;
+}
+
 /* ------------------------------------------------------------------- 
  * ## block list
  * ------------------------------------------------------------------- */

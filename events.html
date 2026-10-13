@@ -87,26 +87,33 @@
     <!-- page content
     ================================================== -->
     <section class="page-content">
-
         <div class="row wide block-large-1-2 block-900-full events-list">
-            <script src="js/event-render.js"></script>
-            <script>
-                generateEventElements(eventsdb);
-            </script>
+        <script src="js/event-render.js"></script>
+        <script>
+            generateEventElements(eventsdb);
+        </script>
         </div> 
 
-        <div class="event-modal">
-            <div id="event-0" class="event-modal-container">
+        <div class="event-modal alert-box">
+            <span class="alert-box__close">&times;</span>
+            <div id="event-0" class="column events-list__item event-modal__item">
                 <div class="media-wrap event-thumb">
-                    <img src="">
-                    </img>
+                    <video autoplay="" muted="" loop="" alt="">
+                        <source src="https://f004.backblazeb2.com/file/lov-static-hosting/media/videos/YardSale2025_2.39x1-480.mp4" ,="" type="video/mp4">
+                        <source src="https://f004.backblazeb2.com/file/lov-static-hosting/media/videos/YardSale2025_2.39x1-480.mp4" ,="" type="video/mp4">
+                        <source src="https://f004.backblazeb2.com/file/lov-static-hosting/media/videos/YardSale2025_2.39x1-480.mp4" ,="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="column events-list__item">
                     <h3 class="display-1 events-list__item-title">
                         Event Title
                     </h3>
                     <p>
-                        Lorem Ipsum sit dolor etc
+                        Come to our church on 23rd Aug. to pick up free school supplies to help your student start the school year strong!
+                            <em>This event is on a first-come-first-served basis while supplies last!
+                        Children <strong>must</strong> be present to recieve supplies.
+                    </em>
                     </p>
                     <ul class="events-list__meta">
                         <li class="events-list__meta-date">date</li>
@@ -248,5 +255,4 @@
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
 </body>
