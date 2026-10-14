@@ -54,23 +54,25 @@ function genEventModal(event) {
             // </div>
     let eventModalContent =
             `
-                <span class="alert-box__close">&times;</span>
-                <div id="event-modal__content" class="column events-list__item">
+            <span class="alert-box__close">&times;</span>
+            <div id="event-modal__content" class="column events-list__item">
+                <div class="media-wrap event-thumb">
                     ${mediaContainer}
                 </div>
                 <div class="column events-list__item">
-                    <h3 class="display-1 events-list__item-title">
+                    <h1 class="display-1 events-list__item-title">
                         ${event.title}
-                    </h3>
+                    </h1>
                     <p>
-                    ${event.shortDescription}
+                    ${event.longDescription || event.shortDescription}
                     </p>
                     <ul class="events-list__meta">
                         <li class="events-list__meta-date">${event.occurrence.date}</li>
                         <li class="events-list__meta-time">${event.occurrence.time}</li>
                         <li class="events-list__meta-location">${event.location}</li>
                     </ul>
-                </div
+                </div>
+            </div>
             `
     return eventModalContent
 }

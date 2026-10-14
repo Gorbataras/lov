@@ -27,8 +27,7 @@ const eventsdb = [
                     Please donate by August 17th, as the distribution will happen soon after.
                     Drop off your donations in the church lobby during our service times.
         `,
-        longDescription: `
-                    `,
+        longDescription: ``,
         occurrence: {
             date: "Until August 17th 2025",
             time: "10:00am to 1:30pm Sundays, 7:00pm to 9:00pm Wednesdays"
