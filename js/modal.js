@@ -1,24 +1,18 @@
-var modalEl = document.getElementsByClassName("event-modal")[0]
-
-var span = document.getElementsByClassName("close")[0];
+var modalEl = document.getElementById("event-modal")
 
 function openModal(id) {
     // initialize var, on error it will be blank
-    // let eventModal
-    console.log("check event id: "+id)
+    let eventModal
+    // console.log("check event id: "+id)
     // console.log(JSON.stringify(eventsdb.filter( events => events.URL() === id)))
-    // try {
-    //     eventModal = genEventModal(eventsdb.filter( events => events.URL() === id))
-    // } catch (error) {
-    //     console.log("unable to fetch event Item")        
-    //     console.log("event: "+JSON.stringify(eventModal))
-    // }
-    // document.getElementsByClassName("event-modal")[0].innerHTML = eventModal
+    try {
+        eventModal = eventsdb.filter( events => events.URL() === id)
+        modalEl.innerHTML = genEventModal(eventModal[0])
+    } catch (error) {
+        console.log("unable to fetch event Item")        
+        // console.log("event: "+JSON.stringify(eventModal))
+    }
     modalEl.style.display = "block";
-}
-
-span.onclick = function() {
-    modalEl.style.display = "none";
 }
 
 window.onclick = function(event) {
@@ -56,10 +50,12 @@ function genEventModal(event) {
                 alt="${event.media.altText}"></img>
                 `
     }
+            // <div id="event-modal" class="alert-box">
+            // </div>
     let eventModalContent =
             `
-            <div id="${event.URL()}" class="event-modal">
-                <div class="media-wrap event-thumb">
+                <span class="alert-box__close">&times;</span>
+                <div id="event-modal__content" class="column events-list__item">
                     ${mediaContainer}
                 </div>
                 <div class="column events-list__item">
@@ -75,7 +71,6 @@ function genEventModal(event) {
                         <li class="events-list__meta-location">${event.location}</li>
                     </ul>
                 </div
-            </div>
             `
     return eventModalContent
 }

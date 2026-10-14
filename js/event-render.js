@@ -51,7 +51,7 @@ function genEventItem (event) {
                 </div>
                 <div class="column events-list__item">
                     <h3 class="display-1 events-list__item-title">
-                        <a onclick="openModal('yard-sale')" title="">${event.title}</a>
+                        <a onclick="openModal('${event.URL()}')" title="">${event.title}</a>
                     </h3>
                     <p>
                     ${event.shortDescription}
