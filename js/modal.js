@@ -42,18 +42,20 @@ function genEventModal(event) {
         `
     } else {
         var mediaContainer = `
-            <img src="${event.media.source2000}"
+            <img
+                src="${event.media.source2000}"
                 srcset="
                     ${event.media.source1000} 2000w, 
                     ${event.media.source500} 500w" 
                 sizes="(max-width: 2000px) 100vw, 2000px"
-                alt="${event.media.altText}"></img>
-                `
+                alt="${event.media.altText}"
+            >
+            </img>
+        `
     }
             // <div id="event-modal" class="alert-box">
             // </div>
-    let eventModalContent =
-            `
+    let eventModalContent =`
             <span class="alert-box__close">&times;</span>
             <div id="event-modal__content" class="column events-list__item">
                 <div class="media-wrap event-thumb">
@@ -73,6 +75,6 @@ function genEventModal(event) {
                     </ul>
                 </div>
             </div>
-            `
+    `
     return eventModalContent
 }
