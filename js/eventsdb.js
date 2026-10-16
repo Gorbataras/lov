@@ -6,13 +6,17 @@ const eventsdb = [
         Our Yard Sale was a great success and we were really happy to meet some of our neighbors!
         `,
         longDescription: "",
-        occurrence: {
-            date: "Sat Sept 27th",
-            time: "12:00 PM - 3:00 PM"
-        },
+        created: "2026-10-16T08:24",
+        updated: "",
+        start: "2025-09-27T12:00",
+        end: "2025-09-27T15:00",
+        date: function() { return new Date(this.start).toDateString() },
+        time: function() { return new Date(this.start).toLocaleTimeString() + " - " + new Date(this.end).toLocaleTimeString() },
         location: "17418 108th Ave SE Renton, WA",
         media: {
             type: "video",
+            source: "YardSale2025_2.39x1.mp4",
+            source2560: function() { return CDNroot + this.type + "s" + this.source },
             source2000: "https://f004.backblazeb2.com/file/lov-static-hosting/media/videos/YardSale2025_2.39x1-480.mp4",
             source1000: "https://f004.backblazeb2.com/file/lov-static-hosting/media/videos/YardSale2025_2.39x1-480.mp4",
             source500: "https://f004.backblazeb2.com/file/lov-static-hosting/media/videos/YardSale2025_2.39x1-480.mp4",
@@ -28,10 +32,11 @@ const eventsdb = [
                     Drop off your donations in the church lobby during our service times.
         `,
         longDescription: "",
-        occurrence: {
-            date: "Until August 17th 2025",
-            time: "10:00am to 1:30pm Sundays, 7:00pm to 9:00pm Wednesdays"
-        },
+        created: "2026-10-16T08:24",
+        start: "2025-08-01T10:00",
+        end: "2025-08-17T13:30",
+        date: function() { return new Date(this.start).toDateString() },
+        time: function() { return new Date(this.start).toLocaleTimeString() + " - " + new Date(this.end).toLocaleTimeString() },
         location: "17418 108th Ave SE Renton, WA",
         media: {
             type: "image",
@@ -51,10 +56,11 @@ const eventsdb = [
                     </em>
                     `,
         longDescription: "",
-        occurrence: {
-            date: "August 23rd 2025",
-            time: "12:00pm to 3:00pm"
-        },
+        created: "2026-10-16T08:24",
+        start: "2025-08-17T12:00",
+        end: "2025-08-23T15:00",
+        date: function() { return new Date(this.start).toDateString() },
+        time: function() { return new Date(this.start).toLocaleTimeString() + " - " + new Date(this.end).toLocaleTimeString() },
         location: "17418 108th Ave SE Renton, WA",
         media: {
             type: "image",
@@ -74,10 +80,11 @@ const eventsdb = [
                     worship, sermon, caroling, and candlelighting. Come early for free coffee cart coffee.
                     `,
         longDescription: "",
-        occurrence: {
-            date: "Thursday, December 18, 2024",
-            time: "7:00PM - 9:00PM"
-        },
+        created: "2026-12-18T08:24",
+        start: "2025-12-18T19:00",
+        end: "2025-12-18T21:00",
+        date: function() { return new Date(this.start).toDateString() },
+        time: function() { return new Date(this.start).toLocaleTimeString() + " - " + new Date(this.end).toLocaleTimeString() },
         location: "17418 108th Ave SE Renton, WA",
         media: {
             type: "image",
