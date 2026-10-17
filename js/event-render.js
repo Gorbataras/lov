@@ -31,13 +31,18 @@ var keepintouch = `
                 </div>
             </div>
 `
+function prettyTime(t) {
+    let time = new Date(t).toLocaleTimeString().split(" ")
+    time = [time[0].split(" ")[0].split(":").slice(0, 2).join(":"), time[1]]
+    return time.join(" ")
+}
 
 // loop through each event in db:
-function generateEventElements (eventsdb) {
+function generateEventElements(eventsdb) {
     // Sort eventsdb and for each, check that the event has passed
-    eventsdb.sort((a,b) => { a.start - b.start }).forEach(event => {
+    eventsdb.sort((a, b) => { a.start - b.start }).forEach(event => {
         // compare if the value of event start date is larger (larger number means future) than current date
-        if ( event.start > Date() ) {
+        if (event.start < Date()) {
             // if eval is true, append res of func to dom
             document.getElementsByClassName('events-list')[0].innerHTML += genEventItem(event)
         } else {
@@ -47,7 +52,7 @@ function generateEventElements (eventsdb) {
 }
 
 // function genEventItem (title, URL, shortDescription, location, media) {
-function genEventItem (event) {
+function genEventItem(event) {
     if (event.media.type === "video") {
         var mediaContainer = `
             <video autoplay muted loop alt="${event.media.altText}">
@@ -77,7 +82,7 @@ function genEventItem (event) {
                 `
     }
     let eventMiniCard =
-            `
+        `
             <div class="column events-list__item">
                 <div class="media-wrap event-thumb">
                     ${mediaContainer}

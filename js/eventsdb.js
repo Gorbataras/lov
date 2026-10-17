@@ -10,8 +10,8 @@ const eventsdb = [
         updated: "",
         start: "2025-09-27T12:00",
         end: "2025-09-27T15:00",
-        date: function() { return new Date(this.start).toDateString() },
-        time: function() { return new Date(this.start).toLocaleTimeString() + " - " + new Date(this.end).toLocaleTimeString() },
+        date: function() { return new Date(this.start).toDateString().split(" ").slice(0,3).join(" ") },
+        time: function() { return prettyTime(this.start) + " - " + prettyTime(this.end) },
         location: "17418 108th Ave SE Renton, WA",
         media: {
             type: "video",
