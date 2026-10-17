@@ -53,8 +53,6 @@ function genEventModal(event) {
             </img>
         `
     }
-            // <div id="event-modal" class="alert-box">
-            // </div>
     let eventModalContent =`
             <span class="alert-box__close">&times;</span>
             <div id="event-modal__content" class="column events-list__item">
@@ -69,8 +67,8 @@ function genEventModal(event) {
                     ${event.longDescription || event.shortDescription}
                     </p>
                     <ul class="events-list__meta">
-                        <li class="events-list__meta-date">${event.occurrence.date}</li>
-                        <li class="events-list__meta-time">${event.occurrence.time}</li>
+                        <li class="events-list__meta-date">${event.date()}</li>
+                        <li class="events-list__meta-time">${event.time()}</li>
                         <li class="events-list__meta-location">${event.location}</li>
                     </ul>
                 </div>
