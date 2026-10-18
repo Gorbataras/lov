@@ -42,7 +42,7 @@ function generateEventElements(eventsdb) {
     // Sort eventsdb and for each, check that the event has passed
     eventsdb.sort((a, b) => { a.start - b.start }).forEach(event => {
         // compare if the value of event start date is larger (larger number means future) than current date
-        if (event.start < Date()) {
+        if (event.start > Date()) {
             // if eval is true, append res of func to dom
             document.getElementsByClassName('events-list')[0].innerHTML += genEventItem(event)
         } else {
